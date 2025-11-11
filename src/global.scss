@@ -4,195 +4,218 @@
 @import 'tailwindcss/utilities.css';
 
 @import "@angular/cdk/overlay-prebuilt.css";
-
-/*
-* App Global CSS
-* ----------------------------------------------------------------------------
-* Put style rules here that you want to apply globally. These styles are for
-* the entire app and not just one component. Additionally, this file can be
-* used as an entry point to import other CSS/Sass files to be included in the
-* output CSS.
-* For more information on global stylesheets, visit the documentation:
-* https://ionicframework.com/docs/layout/global-stylesheets
-*/
-
-/* TailwindCSS */
-@import "tailwindcss";
-
-/* Core CSS required for Ionic components to work properly */
 @import "@ionic/angular/css/core.css";
-
-/* Basic CSS for apps built with Ionic */
 @import "@ionic/angular/css/normalize.css";
 @import "@ionic/angular/css/structure.css";
 @import "@ionic/angular/css/typography.css";
 @import "@ionic/angular/css/display.css";
 
-/* Optional CSS utils that can be commented out */
+/* Optional Ionic utils */
 @import "@ionic/angular/css/padding.css";
 @import "@ionic/angular/css/float-elements.css";
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
-/**
-* Ionic Dark Mode
-* -----------------------------------------------------
-* For more info, please see:
-* https://ionicframework.com/docs/theming/dark-mode
-*/
-
-/* @import "@ionic/angular/css/palettes/dark.always.css"; */
-/* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
-
+/* Spartan UI preset */
 @import "@spartan-ng/brain/hlm-tailwind-preset.css";
 
+/* ===========================
+   Rubik Font
+=========================== */
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ===========================
+   Root variables
+=========================== */
 :root {
-color-scheme: light;
+  color-scheme: light;
 
---font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* Fonts */
+  --ion-font-family: 'Rubik', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: var(--ion-font-family);
 
---radius: 0.625rem;
---background: oklch(1 0 0);
---foreground: oklch(0.145 0 0);
---card: oklch(1 0 0);
---card-foreground: oklch(0.145 0 0);
---popover: oklch(1 0 0);
---popover-foreground: oklch(0.145 0 0);
---primary: oklch(0.205 0 0);
---primary-foreground: oklch(0.985 0 0);
---secondary: oklch(0.97 0 0);
---secondary-foreground: oklch(0.205 0 0);
---muted: oklch(0.97 0 0);
---muted-foreground: oklch(0.556 0 0);
---accent: oklch(0.97 0 0);
---accent-foreground: oklch(0.205 0 0);
---destructive: oklch(0.577 0.245 27.325);
---border: oklch(0.922 0 0);
---input: oklch(0.922 0 0);
---ring: oklch(0.708 0 0);
---sidebar: oklch(0.985 0 0);
---sidebar-foreground: oklch(0.145 0 0);
---sidebar-primary: oklch(0.205 0 0);
---sidebar-primary-foreground: oklch(0.985 0 0);
---sidebar-accent: oklch(0.97 0 0);
---sidebar-accent-foreground: oklch(0.205 0 0);
---sidebar-border: oklch(0.922 0 0);
---sidebar-ring: oklch(0.708 0 0);
+  /* Your color system */
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
 :root.dark {
-color-scheme: dark;
+  color-scheme: dark;
 
---background: oklch(0.145 0 0);
---foreground: oklch(0.985 0 0);
---card: oklch(0.205 0 0);
---card-foreground: oklch(0.985 0 0);
---popover: oklch(0.205 0 0);
---popover-foreground: oklch(0.985 0 0);
---primary: oklch(0.922 0 0);
---primary-foreground: oklch(0.205 0 0);
---secondary: oklch(0.269 0 0);
---secondary-foreground: oklch(0.985 0 0);
---muted: oklch(0.269 0 0);
---muted-foreground: oklch(0.708 0 0);
---accent: oklch(0.269 0 0);
---accent-foreground: oklch(0.985 0 0);
---destructive: oklch(0.704 0.191 22.216);
---border: oklch(1 0 0 / 10%);
---input: oklch(1 0 0 / 15%);
---ring: oklch(0.556 0 0);
---sidebar: oklch(0.205 0 0);
---sidebar-foreground: oklch(0.985 0 0);
---sidebar-primary: oklch(0.985 0 0);
---sidebar-primary-foreground: oklch(0.205 0 0);
---sidebar-accent: oklch(0.269 0 0);
---sidebar-accent-foreground: oklch(0.985 0 0);
---sidebar-border: oklch(1 0 0 / 10%);
---sidebar-ring: oklch(0.556 0 0);
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.985 0 0);
+  --sidebar-primary-foreground: oklch(0.205 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* ===========================
+   Base styles
+=========================== */
 @layer base {
-* {
-@apply border-border outline-ring/50;
-}
-body {
-@apply bg-background text-foreground;
-}
-}
-@import "@spartan-ng/brain/hlm-tailwind-preset.css";
+  * {
+    @apply border-border outline-ring/50;
+  }
 
-:root {
-color-scheme: light;
-
-
-
---radius: 0.625rem;
---background: oklch(1 0 0);
---foreground: oklch(0.145 0 0);
---card: oklch(1 0 0);
---card-foreground: oklch(0.145 0 0);
---popover: oklch(1 0 0);
---popover-foreground: oklch(0.145 0 0);
---primary: oklch(0.205 0 0);
---primary-foreground: oklch(0.985 0 0);
---secondary: oklch(0.97 0 0);
---secondary-foreground: oklch(0.205 0 0);
---muted: oklch(0.97 0 0);
---muted-foreground: oklch(0.556 0 0);
---accent: oklch(0.97 0 0);
---accent-foreground: oklch(0.205 0 0);
---destructive: oklch(0.577 0.245 27.325);
---border: oklch(0.922 0 0);
---input: oklch(0.922 0 0);
---ring: oklch(0.708 0 0);
---sidebar: oklch(0.985 0 0);
---sidebar-foreground: oklch(0.145 0 0);
---sidebar-primary: oklch(0.205 0 0);
---sidebar-primary-foreground: oklch(0.985 0 0);
---sidebar-accent: oklch(0.97 0 0);
---sidebar-accent-foreground: oklch(0.205 0 0);
---sidebar-border: oklch(0.922 0 0);
---sidebar-ring: oklch(0.708 0 0);
-}
-
-:root.dark {
-color-scheme: dark;
-
---background: oklch(0.145 0 0);
---foreground: oklch(0.985 0 0);
---card: oklch(0.205 0 0);
---card-foreground: oklch(0.985 0 0);
---popover: oklch(0.205 0 0);
---popover-foreground: oklch(0.985 0 0);
---primary: oklch(0.922 0 0);
---primary-foreground: oklch(0.205 0 0);
---secondary: oklch(0.269 0 0);
---secondary-foreground: oklch(0.985 0 0);
---muted: oklch(0.269 0 0);
---muted-foreground: oklch(0.708 0 0);
---accent: oklch(0.269 0 0);
---accent-foreground: oklch(0.985 0 0);
---destructive: oklch(0.704 0.191 22.216);
---border: oklch(1 0 0 / 10%);
---input: oklch(1 0 0 / 15%);
---ring: oklch(0.556 0 0);
---sidebar: oklch(0.205 0 0);
---sidebar-foreground: oklch(0.985 0 0);
---sidebar-primary: oklch(0.985 0 0);
---sidebar-primary-foreground: oklch(0.205 0 0);
---sidebar-accent: oklch(0.269 0 0);
---sidebar-accent-foreground: oklch(0.985 0 0);
---sidebar-border: oklch(1 0 0 / 10%);
---sidebar-ring: oklch(0.556 0 0);
-}
-
-@layer base {
-* {
-@apply border-border outline-ring/50;
-}
-body {
-@apply bg-background text-foreground;
-}
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--ion-font-family);
+  }
 }

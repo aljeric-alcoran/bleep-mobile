@@ -28,6 +28,18 @@
       ],
       "@spartan-ng/helm/utils": [
         "./src/libs/ui/utils/src/index.ts"
+      ],
+      "@spartan-ng/helm/card": [
+        "./src/libs/ui/card/src/index.ts"
+      ],
+      "@spartan-ng/helm/input": [
+        "./src/libs/ui/input/src/index.ts"
+      ],
+      "@spartan-ng/helm/form-field": [
+        "./src/libs/ui/form-field/src/index.ts"
+      ],
+      "@spartan-ng/helm/label": [
+        "./src/libs/ui/label/src/index.ts"
       ]
     }
   },
