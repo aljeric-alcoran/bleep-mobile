@@ -40,6 +40,12 @@
       ],
       "@spartan-ng/helm/label": [
         "./src/libs/ui/label/src/index.ts"
+      ],
+      "@spartan-ng/helm/alert": [
+        "./src/libs/ui/alert/src/index.ts"
+      ],
+      "@spartan-ng/helm/icon": [
+        "./src/libs/ui/icon/src/index.ts"
       ]
     }
   },

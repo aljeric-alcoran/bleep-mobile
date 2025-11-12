@@ -30,6 +30,8 @@
     "@capacitor/keyboard": "7.0.3",
     "@capacitor/status-bar": "7.0.3",
     "@ionic/angular": "^8.0.0",
+    "@ng-icons/core": "^31.4.0",
+    "@ng-icons/lucide": "^31.4.0",
     "@spartan-ng/brain": "^0.0.1-alpha.555",
     "@tailwindcss/postcss": "^4.1.17",
     "class-variance-authority": "^0.7.0",
