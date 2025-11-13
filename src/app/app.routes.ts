@@ -10,12 +10,13 @@ export const routes: Routes = [
       loadComponent: () => import('./pages/login/login.page').then((m) => m.LoginComponent),
    },
    {
+      path: 'profile',
+      loadComponent: () => import('./pages/profile/profile.page').then( m => m.ProfilePage)
+   },
+   {
       path: '',
       redirectTo: 'home',
       pathMatch: 'full',
    },
-   {
-      path: 'profile',
-      loadComponent: () => import('./pages/profile/profile.page').then( m => m.ProfilePage)
-   },
+   
 ];

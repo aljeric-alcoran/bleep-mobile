@@ -8,9 +8,9 @@ import {
    lucideBell
 } from '@ng-icons/lucide';
 import { Router, NavigationEnd } from '@angular/router';
-import { NavController } from '@ionic/angular';
 import { filter } from 'rxjs/operators';
 import { IonToolbar, IonFooter } from "@ionic/angular/standalone";
+import { RouterModule } from '@angular/router';
 
 @Component({
    selector: 'app-footer-menu',
@@ -26,7 +26,8 @@ import { IonToolbar, IonFooter } from "@ionic/angular/standalone";
    imports: [
       IonFooter, 
       IonToolbar, 
-      NgIcon
+      NgIcon,
+      RouterModule
    ]
 })
 export class FooterMenuComponent  implements OnInit {
@@ -41,7 +42,6 @@ export class FooterMenuComponent  implements OnInit {
 
    constructor(
       private router: Router,
-      private navCtrl: NavController
    ) {
       this.router.events
          .pipe(filter(event => event instanceof NavigationEnd))
@@ -51,8 +51,4 @@ export class FooterMenuComponent  implements OnInit {
    }
 
    ngOnInit() {}
-
-   switchRoute(menuRoute: string) {
-      this.navCtrl.navigateForward(menuRoute);
-   }
 }

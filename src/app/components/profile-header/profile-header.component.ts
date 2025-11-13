@@ -2,35 +2,42 @@ import { Component, OnInit } from '@angular/core';
 import { IonHeader, IonToolbar } from '@ionic/angular/standalone';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { HlmButtonImports } from '@spartan-ng/helm/button';
-import { HlmInputImports } from '@spartan-ng/helm/input';
+import { NavController } from '@ionic/angular';
 import { 
-   lucideSearch, 
    lucideShoppingCart, 
    lucideMessageCircle,
+   lucideCircleUserRound
 } from '@ng-icons/lucide';
+import { RouterModule } from '@angular/router';
 
 @Component({
    selector: 'app-profile-header',
    templateUrl: './profile-header.component.html',
    styleUrls: ['./profile-header.component.scss'],
    providers: [provideIcons({ 
-      lucideSearch,
       lucideShoppingCart,
-      lucideMessageCircle 
+      lucideMessageCircle,
+      lucideCircleUserRound
    })],
-   imports: [
+   imports: [ 
       NgIcon,
       IonHeader,
       IonToolbar,
       HlmButtonImports,
-      HlmInputImports
+      RouterModule
    ]
 })
 export class ProfileHeaderComponent  implements OnInit {
 
-  constructor() { }
+   constructor(
+      private navCtrl: NavController
+   ) { }
 
-  ngOnInit() {}
+   ngOnInit() {}
+
+   switchRoute(route: string) {
+      this.navCtrl.navigateForward(route);
+   }
 
 }
 
