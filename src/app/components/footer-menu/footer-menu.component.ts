@@ -1,4 +1,4 @@
-import { Component, computed, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import {
    lucideHouse,
@@ -9,6 +9,7 @@ import {
 } from '@ng-icons/lucide';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { IonToolbar, IonFooter } from "@ionic/angular/standalone";
 
 @Component({
    selector: 'app-footer-menu',
@@ -22,6 +23,8 @@ import { filter } from 'rxjs/operators';
       lucideBell
    })],
    imports: [
+      IonFooter, 
+      IonToolbar, 
       NgIcon
    ]
 })
