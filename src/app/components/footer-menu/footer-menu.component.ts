@@ -8,6 +8,7 @@ import {
    lucideBell
 } from '@ng-icons/lucide';
 import { Router, NavigationEnd } from '@angular/router';
+import { NavController } from '@ionic/angular';
 import { filter } from 'rxjs/operators';
 import { IonToolbar, IonFooter } from "@ionic/angular/standalone";
 
@@ -38,14 +39,20 @@ export class FooterMenuComponent  implements OnInit {
    ];
    activeRoute!: string;
 
-   constructor(private router: Router) {
+   constructor(
+      private router: Router,
+      private navCtrl: NavController
+   ) {
       this.router.events
          .pipe(filter(event => event instanceof NavigationEnd))
          .subscribe((event: NavigationEnd) => {
-            console.log('Now on:', event.urlAfterRedirects);
             this.activeRoute = event.urlAfterRedirects
          });
    }
 
    ngOnInit() {}
+
+   switchRoute(menuRoute: string) {
+      this.navCtrl.navigateForward(menuRoute);
+   }
 }

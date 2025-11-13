@@ -1,8 +1,9 @@
 <ion-footer>
-   <ion-toolbar color="white" class="bg-white">
+   <ion-toolbar color="white" class="bg-white footer-toolbar">
       <div class="pb-4 flex items-center justify-around text-gray-700 space-x-5 px-2">
          @for (menu of menuList; track menu.label) {
             <div 
+               (click)="switchRoute(menu.route)"
                class="w-20 pt-2 flex flex-col gap-1 items-center justify-center border-t-2" 
                [class]="menu.route === activeRoute ? 'text-primary border-red-500' : 'border-transparent'"
             >

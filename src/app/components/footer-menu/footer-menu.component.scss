@@ -4,3 +4,7 @@ ion-footer ion-toolbar {
    --border-width: 0;
    border-top: none;
 }
+
+ion-toolbar.footer-toolbar::part(container) {
+   padding: 0;
+ }
