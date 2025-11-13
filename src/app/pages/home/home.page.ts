@@ -7,12 +7,8 @@ import {
    lucideSearch, 
    lucideShoppingCart, 
    lucideMessageCircle,
-   lucideHouse,
-   lucideCircleUserRound,
-   lucideShoppingBag,
-   lucideTv,
-   lucideBell
 } from '@ng-icons/lucide';
+import { FooterMenuComponent } from "src/app/components/footer-menu/footer-menu.component";
 
 @Component({
    selector: 'app-home',
@@ -22,20 +18,16 @@ import {
       lucideSearch, 
       lucideShoppingCart, 
       lucideMessageCircle,
-      lucideHouse,
-      lucideCircleUserRound,
-      lucideShoppingBag,
-      lucideTv,
-      lucideBell
    })],
-   imports: [ 
+   imports: [
       NgIcon,
-      IonHeader, 
-      IonToolbar, 
+      IonHeader,
+      IonToolbar,
       IonContent,
-      IonFooter, 
-      HlmInputImports, 
-      HlmButtonImports
+      IonFooter,
+      HlmInputImports,
+      HlmButtonImports,
+      FooterMenuComponent
    ],
 })
 export class HomePage {
