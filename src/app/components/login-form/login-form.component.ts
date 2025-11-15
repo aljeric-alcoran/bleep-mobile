@@ -4,6 +4,7 @@ import { HlmInputImports } from '@spartan-ng/helm/input';
 import { HlmLabelImports } from '@spartan-ng/helm/label';
 import { HlmCardImports } from '@spartan-ng/helm/card';
 import { AlertComponent } from "../alert/alert.component";
+import { NavController } from '@ionic/angular';
 import { 
    FormBuilder, 
    FormGroup, 
@@ -29,12 +30,13 @@ import { debounceTime } from 'rxjs';
 export class LoginFormComponent implements OnInit {
    private loginService = inject(LoginService);
    private destroyRef = inject(DestroyRef);
+   private navCtrl = inject(NavController);
    private readonly formBuider = inject(FormBuilder);
    public formGroup: FormGroup = this.formBuider.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]],
    });
-   
+
    hasError = signal<boolean>(false);
    errorMessage = signal<string>('');
 
@@ -64,6 +66,7 @@ export class LoginFormComponent implements OnInit {
       const subscription = this.loginService.onLoginUser(payload).subscribe({
          next: (response) => {
             console.log(response);
+            this.navCtrl.navigateRoot('/profile')
          },
          error: (error) => {
             this.hasError.set(true);
