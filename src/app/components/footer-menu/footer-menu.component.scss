@@ -1,0 +1,10 @@
+ion-footer,
+ion-footer ion-toolbar {
+   padding: 0;
+   --border-width: 0;
+   border-top: none;
+}
+
+ion-toolbar.footer-toolbar::part(container) {
+   padding: 0;
+ }

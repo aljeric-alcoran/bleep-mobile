@@ -28,6 +28,24 @@
       ],
       "@spartan-ng/helm/utils": [
         "./src/libs/ui/utils/src/index.ts"
+      ],
+      "@spartan-ng/helm/card": [
+        "./src/libs/ui/card/src/index.ts"
+      ],
+      "@spartan-ng/helm/input": [
+        "./src/libs/ui/input/src/index.ts"
+      ],
+      "@spartan-ng/helm/form-field": [
+        "./src/libs/ui/form-field/src/index.ts"
+      ],
+      "@spartan-ng/helm/label": [
+        "./src/libs/ui/label/src/index.ts"
+      ],
+      "@spartan-ng/helm/alert": [
+        "./src/libs/ui/alert/src/index.ts"
+      ],
+      "@spartan-ng/helm/icon": [
+        "./src/libs/ui/icon/src/index.ts"
       ]
     }
   },

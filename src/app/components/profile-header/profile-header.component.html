@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+   <ion-toolbar color="primary">
+      <div class="mt-8 ion-padding flex items-center justify-end">
+         <div class="flex items-center justify-center gap-4">
+            <ng-icon name="lucideShoppingCart" class="text-xl"/>
+            <ng-icon name="lucideMessageCircle" class="text-xl"/>
+         </div>
+      </div>
+      <div class="mt-4 px-4 mb-4 flex items-center justify-between">
+         <ng-icon name="lucideCircleUserRound" class="text-4xl top-2 left-2"/>
+         <div class="flex gap-2 font-normal">
+            <button 
+               hlmBtn 
+               size="sm" 
+               class="rounded-sm bg-white text-primary"
+               routerLink="/login"
+            >
+               Log In
+            </button>
+            <button hlmBtn size="sm" class="rounded-sm border-2 bg-transparent">Sign Up</button>
+         </div>
+      </div>
+   </ion-toolbar>
+</ion-header>
