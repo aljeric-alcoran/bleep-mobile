@@ -1,2 +1,2 @@
 # bleep-mobile
-Mobile version of a grocery delivery platform.
+Mobile version of the grocery delivery platform.
